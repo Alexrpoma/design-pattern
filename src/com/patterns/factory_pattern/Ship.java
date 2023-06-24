@@ -15,4 +15,9 @@ public class Ship implements Transport{
   public void maxLoadQuantity() {
     System.out.printf("Maximum weight: %dKg%n", 15000);
   }
+
+  @Override
+  public void message() {
+    System.out.println("Delivering by sea your dreams every where!");
+  }
 }

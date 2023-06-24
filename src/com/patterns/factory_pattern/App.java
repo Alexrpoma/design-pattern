@@ -7,5 +7,12 @@ public class App {
     road.deliver(23, "tables");
     road.message();
     road.maxLoadQuantity();
+
+    System.out.println();
+    Transport sea = TransportFactory.build("Ship");
+    sea.cost(1560);
+    sea.deliver(100, "Car components");
+    sea.message();
+    road.maxLoadQuantity();
   }
 }
