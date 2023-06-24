@@ -1,19 +1,43 @@
 package com.patterns.abstract_factory_pattern;
 
-import com.patterns.abstract_factory_pattern.flying_animal.FlyingAnimalFactory;
-import com.patterns.abstract_factory_pattern.terrestrial_animal.TerrestrialAnimalFactory;
-
 public class App {
   public static void main(String[] args) {
-    var terrestrialAnimalFactory = (TerrestrialAnimalFactory) AnimalFactoryProvider.getAnimalFactory("TerrestrialAnimal");
+    var terrestrialAnimalFactory = AnimalFactoryProvider.getTerrestrialAnimalFactory();
     var dog = terrestrialAnimalFactory.create("Dog");
-    System.out.println(dog.generalInfo());
-    System.out.println(dog.description());
+    System.out.printf(
+        """
+            Dog:
+            %s
+            %s
+            %s
+            %s
+            %s
+            %s
+            %n""", dog.generalInfo(),
+        dog.description(),
+        dog.makeSound(),
+        dog.meal(),
+        dog.color(),
+        dog.run()
+    );
 
-    System.out.println();
-    var flyingAnimalFactory = (FlyingAnimalFactory) AnimalFactoryProvider.getAnimalFactory("FlyingAnimal");
+    var flyingAnimalFactory = AnimalFactoryProvider.getFlyingAnimalFactory();
     var eagle = flyingAnimalFactory.create("Eagle");
-    System.out.println(eagle.description());
-    System.out.println(eagle.generalInfo());
+    System.out.printf(
+        """
+            Eagle:
+            %s
+            %s
+            %s
+            %s
+            %s
+            %s
+            %n""", eagle.generalInfo(),
+        eagle.description(),
+        eagle.makeSound(),
+        eagle.meal(),
+        eagle.color(),
+        eagle.flying()
+    );
   }
 }

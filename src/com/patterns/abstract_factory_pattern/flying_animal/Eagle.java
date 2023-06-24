@@ -3,7 +3,7 @@ package com.patterns.abstract_factory_pattern.flying_animal;
 public class Eagle implements FlyingAnimal{
   @Override
   public String makeSound() {
-    return "makes usually a series of high-pitched whistling or piping notes";
+    return "Makes usually a series of high-pitched whistling or piping notes";
   }
 
   @Override
@@ -25,7 +25,6 @@ public class Eagle implements FlyingAnimal{
   public String description() {
     return """
         Eagle is the common name for many large birds of prey of the family Accipitridae.
-        Eagles belong to several groups of genera, some of which are closely related
-        """;
+        Eagles belong to several groups of genera, some of which are closely related""";
   }
 }

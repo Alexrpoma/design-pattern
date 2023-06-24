@@ -1,17 +1,15 @@
 package com.patterns.abstract_factory_pattern;
 
+import com.patterns.abstract_factory_pattern.flying_animal.FlyingAnimal;
 import com.patterns.abstract_factory_pattern.flying_animal.FlyingAnimalFactory;
+import com.patterns.abstract_factory_pattern.terrestrial_animal.TerrestrialAnimal;
 import com.patterns.abstract_factory_pattern.terrestrial_animal.TerrestrialAnimalFactory;
 
 public class AnimalFactoryProvider {
-
-  public static AbstractAnimalFactory getAnimalFactory(String animalType) {
-    if (animalType.equals("FlyingAnimal")) {
-      return new FlyingAnimalFactory();
-    }
-    else if (animalType.equals("TerrestrialAnimal")) {
-      return new TerrestrialAnimalFactory();
-    }
-    else throw new IllegalArgumentException(animalType + " factory doesn't exist!");
+  public static AbstractAnimalFactory<TerrestrialAnimal> getTerrestrialAnimalFactory() {
+    return new TerrestrialAnimalFactory();
+  }
+  public static AbstractAnimalFactory<FlyingAnimal> getFlyingAnimalFactory() {
+    return new FlyingAnimalFactory();
   }
 }
