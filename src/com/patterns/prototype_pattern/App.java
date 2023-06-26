@@ -12,5 +12,14 @@ public class App {
     circle1.setRadius(20);
     System.out.println(circle1);
     System.out.println(circle.equals(circle1));
+
+    Square square = new Square();
+    square.setSide(24);
+    square.color = "orange";
+    System.out.println(square);
+
+    Square square1 = (Square) square.clone();
+    square1.color = "black";
+    System.out.println(square1);
   }
 }

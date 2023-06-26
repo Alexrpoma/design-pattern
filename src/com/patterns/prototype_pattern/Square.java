@@ -4,6 +4,8 @@ public class Square extends Shape{
 
   private int side;
 
+  public Square(){}
+
   public Square(Square square) {
     super(square);
     if (square != null) {
@@ -23,5 +25,14 @@ public class Square extends Shape{
   @Override
   public Shape clone() {
     return new Square(this);
+  }
+
+  @Override
+  public String toString() {
+    return "Square{" +
+        "side=" + side +
+        ", color='" + color + '\'' +
+        "area=" + area() +
+        '}';
   }
 }
