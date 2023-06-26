@@ -27,6 +27,6 @@ public abstract class Shape {
 
   @Override
   public int hashCode() {
-    return Objects.hash(color);
+    return Objects.hash(color, area());
   }
 }

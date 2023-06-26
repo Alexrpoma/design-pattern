@@ -9,10 +9,18 @@ public class App {
     System.out.println(circle);
 
     Circle circle1 = (Circle) circle.clone();
-    circle1.setRadius(20);
     System.out.println(circle1);
-    System.out.println(circle.equals(circle1));
 
+    System.out.println("the circle and circle1 are equals: " + circle.equals(circle1));
+    System.out.println("Circle hashcode: " + circle.hashCode());
+    System.out.println("Circle1 hashcode: " + circle1.hashCode());
+    System.out.println("\nSet radius of circle1 = " + 20);
+    circle1.setRadius(20);
+    System.out.println("the circle and circle1 are equals: " + circle.equals(circle1));
+    System.out.println("Circle hashcode: " + circle.hashCode());
+    System.out.println("Circle1 hashcode: " + circle1.hashCode());
+
+    System.out.println("\nSquare:");
     Square square = new Square();
     square.setSide(24);
     square.color = "orange";
